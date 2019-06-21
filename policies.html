@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>policies</title>
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<style>
+	@import url("css/font-awesome.css");
+	* {
+	margin: 0;
+	padding: 0;
+	}
+
+	*, *:before, *:after {
+	box-sizing: border-box;
+	}
+
+	html, body {
+	height: 100%;
+	font: 16px/1 'Open Sans', sans-serif;
+	color: #555;
+	background: #e5e5e5;
+	}
+
+	body {
+	padding: 50px;
+	}
+
+	.togglebox {
+	width: 90%;
+	margin: 0 auto;
+	background: #fff;
+	transform: translateZ(0);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	}
+
+	input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+	}
+
+	label {
+	position: relative;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	font-size: 17px;
+	font-weight: 700;
+	border-top: 1px solid #ddd;
+	background: #fff;
+	cursor: pointer;
+	}
+
+	label[for*='1'] {
+	border: 0;
+	}
+
+	label:after {
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	font-family: fontawesome;
+	transform: rotate(90deg);
+	transition: .3s transform;
+	}
+
+	section {
+	height: 0;
+	transition: .3s all;
+	overflow: hidden;
+	}
+
+	#toggle1:checked ~ label[for*='1']:after,
+	#toggle2:checked ~ label[for*='2']:after,
+	#toggle3:checked ~ label[for*='3']:after,
+	#toggle4:checked ~ label[for*='4']:after {
+	transform: rotate(0deg);
+	}
+
+	#toggle1:checked ~ #content1,
+	#toggle2:checked ~ #content2,
+	#toggle3:checked ~ #content3,
+	#toggle4:checked ~ #content4 {
+	height: 100px;
+	}
+
+	p {
+	margin: 15px 0;
+	padding: 0 20px;
+	font-size: 14px;
+	line-height: 1.5;
+	}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<!-- 导航 -->
+		<div class="navbar">
+			<div class="logo">Durham House of Pet（DHP）</div>
+			<div class="nav" id="nav">
+				<div class="nav-item"><a href="index.html">About Us</a></div>
+				<div class="nav-item"><a href="products.html">products</a></div>
+				<div class="nav-item"><a href="policies.html">policies</a></div>
+				<div class="nav-item"><a href="employees.html">employees</a></div>
+				<div class="nav-item"><a href="contact_us.html">contact_us</a></div>
+			</div>
+		</div>
+		<div class="box">
+			<div class="togglebox">
+				<input id="toggle1" type="radio" name="toggle" />
+				<label for="toggle1">Return Policy</label>
+				<section id="content1">
+					<p>
+						Support no reason to return. 
+					</p>
+				</section>
+				
+				<input id="toggle2" type="radio" name="toggle" />
+				<label for="toggle2">Financial Policy</label>
+				
+				<section id="content2">
+					<p>Support installment.</p>
+					
+				</section>
+				
+				<input id="toggle3" type="radio" name="toggle" />
+				<label for="toggle3">Shipping Policy</label>
+				
+				<section id="content3">
+					<p>Free shipping for over one hundred dollars</p>
+				</section>
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
